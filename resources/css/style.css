@@ -1,0 +1,46 @@
+* {
+  background-color:black;
+  font-family: Helvetica, sans-serif,"Times New Roman", Times, serif;
+}
+
+
+h1 {
+  font-size: 60px;
+
+}
+
+
+*:not(#city,#temp, #description){
+ color:white;
+}
+
+.container-fluid {
+ margin: auto;
+width: 60%;
+padding: 10px;
+text-align: center;
+  
+}
+.display {
+margin: auto;
+width: 60%;
+border-collapse: separate;
+border-spacing: 15px;
+border: 1px solid #a0a0a0 ;
+border-radius: 16px;
+text-align: center;
+}
+
+#city {
+color: lightgray;
+font-size: 30px;
+}
+
+#temp {
+ color:green;
+ font-size: 25px;
+}
+
+#description {
+ color:wheat;
+}
