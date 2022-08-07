@@ -44,9 +44,9 @@ function searchAction() {
             var getDes = data['weather']['0']['description']
 
             //Send to Html
-            document.getElementById("city").innerHTML = `Weather of <span>${getName}</span>`
-            document.getElementById("temp").innerHTML = `Temperature: <span>${toCelcius(getTemp)}&#8451</span>`
-            document.getElementById("description").innerHTML = `Description: <span>${getDes}</span>`
+            document.getElementById("city").innerHTML = getName
+            document.getElementById("temp").innerHTML = `${toCelcius(getTemp)}&#8451`
+            document.getElementById("description").innerHTML = getDes
 
         })
         .catch(error => {
