@@ -16,13 +16,14 @@ function toCelcius(temper) {
     return Math.trunc(temper - 273);
 }
 
-/*
-    --Event Listerer Search Button--
-    When user press search button this function is called.
-*/
+/*  --Event Listerers Search Button--
+    When user press search button or 'Enter' calls function searchAction().*/
+btn.addEventListener('click', function () {searchAction();})
+input.addEventListener('keypress', function(event){
+    if (event.key == 'Enter') {searchAction()}});
 
-btn.addEventListener('click', function () {
-    
+//Search city
+function searchAction() {
     /*The url that takes data. -input.value->city, -apiKey->key */ 
     fetch('https://api.openweathermap.org/data/2.5/weather?q=' + input.value + '&appid=' + apiKey)
         .then(response => {
@@ -41,7 +42,7 @@ btn.addEventListener('click', function () {
             var getName = data['name']
             var getTemp = data['main']['temp']
             var getDes = data['weather']['0']['description']
-            
+
             //Send to Html
             document.getElementById("city").innerHTML = `Weather of <span>${getName}</span>`
             document.getElementById("temp").innerHTML = `Temperature: <span>${toCelcius(getTemp)}&#8451</span>`
@@ -52,4 +53,4 @@ btn.addEventListener('click', function () {
             //handle error
             alert(error)
         });
-})
+}
