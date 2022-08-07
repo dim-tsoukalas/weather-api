@@ -3,7 +3,25 @@
 
 <head>
     <link rel="stylesheet" href="resources/css/style.css">
+    <script src="jquery-3.6.0.min.js"></script>
     <title>Page Title</title>
+    <script>
+        //define values
+        $().ready(function(){
+        $(".warn").text("Please search for a valid city!");
+        $(".warn").hide();
+    //jQuery function
+    showmess = function()
+    {
+        $(".warn").show();
+    }
+
+    delmess = function( _msg )
+    {
+        $(".warn").hide();
+    }
+})
+        </script>
 </head>
 
 <body>
@@ -14,8 +32,9 @@
             <section class="inputs">
                 <input type="text" placeholder="Enter city" id="cityinput">
                 <input type="submit" value="Search" id="search">
-                
+                <span class="warn"></span>
             </section>
+            
         </section>
 </div>
 

@@ -4,6 +4,9 @@ var city = document.querySelector('#city')
 var temp = document.querySelector('#temp')
 var description = document.querySelector('#description')
 
+var msg = document.getElementsByClassName('#msg')
+
+
 // key from openweathermap
 apiKey = '1ad0a30a3b2d659a6271b81f871d1861'
 
@@ -29,6 +32,7 @@ function searchAction() {
         .then(response => {
             //handle response            
             if (response.ok) {
+                delmess();
                 return response.json()
             }
 
@@ -51,6 +55,9 @@ function searchAction() {
         })
         .catch(error => {
             //handle error
-            alert(error)
+                showmess();
+          
         });
 }
+
+
