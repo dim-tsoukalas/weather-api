@@ -1,6 +1,6 @@
 * {
-  background-color:black;
-  font-family: Helvetica, sans-serif,"Times New Roman", Times, serif;
+  background-color: black;
+  font-family: Helvetica, sans-serif, "Times New Roman", Times, serif;
 }
 
 
@@ -10,37 +10,77 @@ h1 {
 }
 
 
-*:not(#city,#temp, #description){
- color:white;
+h1,
+.container-fluid,
+#search,
+#cityinput {
+  color: white;
 }
 
 .container-fluid {
- margin: auto;
-width: 60%;
-padding: 10px;
-text-align: center;
-  
+  margin: auto;
+  width: 60%;
+  padding: 10px;
+  text-align: center;
+
 }
+
+
 .display {
-margin: auto;
-width: 60%;
-border-collapse: separate;
-border-spacing: 15px;
-border: 1px solid #a0a0a0 ;
-border-radius: 16px;
-text-align: center;
+  margin: auto;
+  width: 60%;
+  border-collapse: separate;
+  border-spacing: 15px;
+  border: 1px solid #a0a0a0;
+  border-radius: 16px;
+  text-align: center;
+}
+
+#cityinput {
+  border-radius: 16px;
+  font-size: 20px;
+}
+
+#search {
+  border-radius: 16px;
+  border: 1px solid #a0a0a0;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+#search:hover {
+  color:black;
+  background-color: rgb(0, 243, 16);
+}
+
+.warn {
+  color: red;
 }
 
 #city {
-color: lightgray;
-font-size: 30px;
+  color: lightgray;
+  font-size: 30px;
 }
 
 #temp {
- color:green;
- font-size: 25px;
+  color: green;
+  font-size: 25px;
 }
 
 #description {
- color:wheat;
+  color: wheat;
+}
+
+.country {
+  color: rgb(180, 0, 0);
+  text-align: right;
+  width: 60%;
+  padding: 10px;
+  border: 1px solid #a0a0a0;
+  border-radius: 16px;
+}
+
+.fas fa-cloud {
+  font-size:60px;
+  color:lightblue;
 }
