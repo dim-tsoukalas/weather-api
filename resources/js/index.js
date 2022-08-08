@@ -4,11 +4,10 @@ let city = document.querySelector('#city')
 let temp = document.querySelector('#temp')
 let description = document.querySelector('#description')
 
+// Send error message to page
 var msg = document.getElementsByClassName('#msg')
 
-const container = document.getElementsByClassName('box')
-
-//focus
+//focus to user input
 input.focus()
 
 // key from openweathermap
@@ -32,6 +31,7 @@ input.addEventListener('keypress', function (event) {
 let i = 0
 //Search city
 function searchAction() {
+    
     /*The url that takes data. -input.value->city, -apiKey->key */
     fetch('https://api.openweathermap.org/data/2.5/weather?q=' + input.value + '&appid=' + apiKey)
         .then(response => {
@@ -54,10 +54,7 @@ function searchAction() {
             var getCountry = data['sys']['country']
             var iconurl = "http://openweathermap.org/img/w/" + iconcode + ".png"
             
-            //Send to Html
-            const card = document.createElement('div');
-            card.classList = 'templ';
-
+            //Create content to add values to html
             const content = `<div class='ch' id=we-${i}>
             <p id="city">${getName + ' ' + getCountry}</p>
             <p id="temp">${toCelcius(getTemp)}&#8451</p>
@@ -65,9 +62,9 @@ function searchAction() {
             <p id="description">${getDes.toUpperCase()}</p>
             </div>
             `;
-            console.log(iconurl)
             i++;
             
+            //Add content to box class at 'index.html'
             {$('.box').append(content);}
             
 
