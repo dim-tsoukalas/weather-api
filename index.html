@@ -4,21 +4,34 @@
 <head>
     <link rel="stylesheet" href="resources/css/style.css">
     <script src="jquery-3.6.0.min.js"></script>
+    <script src="https://kit.fontawesome.com/abe620afc6.js" crossorigin="anonymous"></script>
     <title>Page Title</title>
     <script>
         //define values
         $().ready(function(){
         $(".warn").text("Please search for a valid city!");
         $(".warn").hide();
+        $(".country").hide();
     //jQuery function
     showmess = function()
     {
         $(".warn").show();
     }
 
-    delmess = function( _msg )
+    delmess = function()
     {
         $(".warn").hide();
+    }
+
+    show_icon = function(_iconurl) 
+    {
+        $("#wicon").attr('src', _iconurl);
+    }
+
+    show_country = function(_country)
+    {
+        $(".country").text(_country);
+        $(".country").show();
     }
 })
         </script>
@@ -27,7 +40,9 @@
 <body>
        
     <div class="container-fluid">
+        <i class="fa-solid fa-cloud-sun fa-2xl" style="padding: 50px 10px 20px 10px;"></i>
         <h1>Weather</h1>
+        
         <section class="main">
             <section class="inputs">
                 <input type="text" placeholder="Enter city" id="cityinput">
@@ -42,7 +57,9 @@
         <section class="display">
             <div class="wrapper">
                 <p id="city"></p>
+                <span class="country"></span>
                 <p id="temp"></p>
+                <div id="icon"><img id="wicon"></div>
                 <p id="description"></p>
             </div>
         </section>
