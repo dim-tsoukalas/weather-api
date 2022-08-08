@@ -4,9 +4,8 @@
 }
 
 
-h1 {
+.container-fluid h1 {
   font-size: 60px;
-
 }
 
 
@@ -26,61 +25,74 @@ h1,
 }
 
 
-.display {
-  margin: auto;
-  width: 60%;
+.display .wrapper {
+ 
   border-collapse: separate;
   border-spacing: 15px;
-  border: 1px solid #a0a0a0;
+  border: 1px inset #a0a0a0;
   border-radius: 16px;
   text-align: center;
 }
 
-#cityinput {
+.display::after {
+  content: ’’;
+  width: 90%;
+  height: 50px;
+  position: absolute;
+  bottom: -12px;
+  left: 5%;
+  z-index: -1;
+  opacity: 0.3;
+  border-radius: 20px;
+  background: var(--text_light);
+}
+
+.main .inputs #cityinput {
   border-radius: 16px;
   font-size: 20px;
 }
 
-#search {
+.main .inputs #search {
   border-radius: 16px;
   border: 1px solid #a0a0a0;
   font-size: 20px;
   cursor: pointer;
 }
 
-#search:hover {
-  color:black;
+.main .inputs #search:hover {
+  color: black;
   background-color: rgb(0, 243, 16);
 }
 
-.warn {
+.main .inputs .warn {
   color: red;
 }
 
-#city {
+.display .box #city {
   color: lightgray;
   font-size: 30px;
 }
 
-#temp {
+.display .box #temp {
   color: green;
   font-size: 25px;
 }
 
-#description {
+.display .box #description {
   color: wheat;
 }
 
-.country {
-  color: rgb(180, 0, 0);
-  text-align: right;
-  width: 60%;
-  padding: 10px;
-  border: 1px solid #a0a0a0;
-  border-radius: 16px;
+.display .box #icon {
+  max-width: 100%;
+  height: auto;
 }
 
-.fas fa-cloud {
-  font-size:60px;
-  color:lightblue;
+.display .box {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.box :first-child {
+    align-self:auto;
 }

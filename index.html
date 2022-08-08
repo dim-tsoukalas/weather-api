@@ -9,12 +9,12 @@
     <script>
         //define values
         $().ready(function(){
-        $(".warn").text("Please search for a valid city!");
         $(".warn").hide();
         $(".country").hide();
-    //jQuery function
-    showmess = function()
+    //jQuery functions
+    showmess = function(_mes)
     {
+        $(".warn").text(_mes);
         $(".warn").show();
     }
 
@@ -26,12 +26,6 @@
     show_icon = function(_iconurl) 
     {
         $("#wicon").attr('src', _iconurl);
-    }
-
-    show_country = function(_country)
-    {
-        $(".country").text(_country);
-        $(".country").show();
     }
 })
         </script>
@@ -55,12 +49,8 @@
 </div>
 
         <section class="display">
-            <div class="wrapper">
-                <p id="city"></p>
-                <span class="country"></span>
-                <p id="temp"></p>
-                <div id="icon"><img id="wicon"></div>
-                <p id="description"></p>
+            <div class="box">
+                
             </div>
         </section>
     </div>
