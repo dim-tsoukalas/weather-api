@@ -2,26 +2,49 @@
 <html>
 
 <head>
+    <link rel="stylesheet" href="resources/css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/abe620afc6.js" crossorigin="anonymous"></script>
     <title>Page Title</title>
+    <script>
+        //define values
+        $().ready(function(){
+        $(".warn").hide();
+        $(".country").hide();
+    //jQuery functions
+    showmess = function(_mes)
+    {
+        $(".warn").text(_mes);
+        $(".warn").show();
+    }
+
+    delmess = function()
+    {
+        $(".warn").hide();
+    }
+})
+        </script>
 </head>
 
 <body>
-    
+       
     <div class="container-fluid">
+        <i class="fa-solid fa-cloud-sun fa-2xl" style="padding: 50px 10px 20px 10px;"></i>
+        <h1>Weather</h1>
+        
         <section class="main">
             <section class="inputs">
                 <input type="text" placeholder="Enter city" id="cityinput">
                 <input type="submit" value="Search" id="search">
-                
+                <span class="warn"></span>
             </section>
+            
         </section>
-
+        
+</div>
 
         <section class="display">
-            <div class="wrapper">
-                <p id="city"></p>
-                <p id="temp"></p>
-                <p id="description"></p>
+            <div class="box">
             </div>
         </section>
     </div>
