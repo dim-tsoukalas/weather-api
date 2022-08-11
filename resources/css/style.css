@@ -26,7 +26,7 @@ h1,
 
 
 .display .wrapper {
- 
+
   border-collapse: separate;
   border-spacing: 15px;
   border: 1px inset #a0a0a0;
@@ -88,25 +88,21 @@ h1,
 }
 
 .display .box {
-  display:flex;
+  display: flex;
   align-items: center;
   justify-content: space-evenly;
 }
 
 .box :first-child {
-  align-self:center;
+  align-self: center;
 }
 
 .box :last-child {
-  align-self:center;
+  align-self: center;
 }
 
-@media screen and (min-width: 600px){
-
-  /* For mobile phones: */
-  * {
-    width: 100px;
-  }
+/* For mobile phones: */
+@media screen and (min-width: 600px) {
 
   .container-fluid .main .inputs #search,
   .container-fluid .main .inputs #cityinput {
@@ -120,10 +116,10 @@ h1,
   }
 
   .main .inputs #search {
-  border-radius: 16px;
-  border: 1px solid #a0a0a0;
-  font-size: 30px;
+    border-radius: 16px;
+    border: 1px solid #a0a0a0;
+    font-size: 30px;
 
-}
+  }
 
 }
