@@ -104,10 +104,13 @@ h1,
 /* For mobile phones: */
 @media screen and (max-width: 600px) {
 
-  .container-fluid .main .inputs #search,
+  .container-fluid .main .inputs #search{
+    width: 40%;
+  }
   .container-fluid .main .inputs #cityinput {
     width: 100%;
   }
+
 
   .display .box {
     display: block;
