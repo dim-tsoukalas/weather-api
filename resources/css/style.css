@@ -105,11 +105,7 @@ h1,
 
   /* For mobile phones: */
   * {
-    text-align: center;
-  }
-
-  body {
-    background-color: lightblue;
+    width: 100px;
   }
 
   .container-fluid .main .inputs #search,
