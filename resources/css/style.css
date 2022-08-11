@@ -101,13 +101,15 @@ h1,
   align-self:center;
 }
 
-@media only screen and (max-width: 580px) {
+@media only screen and (max-width: 780px) {
 
   /* For mobile phones: */
   * {
     text-align: center;
-    width :100%;
-    font-size: 40px;
+  }
+
+  body {
+    background-color: lightblue;
   }
 
   .container-fluid .main .inputs #search,
