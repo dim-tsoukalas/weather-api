@@ -35,7 +35,7 @@ h1,
 }
 
 .display::after {
-  content: ’’;
+  content: â€™â€™;
   width: 90%;
   height: 50px;
   position: absolute;
@@ -104,20 +104,27 @@ h1,
 /* For mobile phones: */
 @media screen and (max-width: 600px) {
 
-  .container-fluid .main .inputs #search{
-    width: 60%;
-  }
+
   .container-fluid .main .inputs #cityinput {
     width: 100%;
   }
 
-
-  .display .box {
+   .display .box {
     display: block;
     align-items: center;
     justify-content: space-evenly;
   }
-
+ .display .box .ch{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+  .box :last-child {
+  align-self:stretch;
+    display: block;
+    
+    
+}
   .main .inputs #search {
     border-radius: 16px;
     border: 1px solid #a0a0a0;
