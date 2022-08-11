@@ -101,7 +101,7 @@ h1,
   align-self:center;
 }
 
-@media only screen and (max-width: 780px) {
+@media screen and (max-width: 780px) {
 
   /* For mobile phones: */
   * {
