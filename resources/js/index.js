@@ -31,7 +31,7 @@ input.addEventListener('keypress', function (event) {
 let i = 0
 //Search city
 function searchAction() {
-    
+
     /*The url that takes data. -input.value->city, -apiKey->key */
     fetch('https://api.openweathermap.org/data/2.5/weather?q=' + input.value + '&appid=' + apiKey)
         .then(response => {
@@ -53,7 +53,7 @@ function searchAction() {
             var iconcode = data['weather'][0]['icon']
             var getCountry = data['sys']['country']
             var iconurl = "http://openweathermap.org/img/w/" + iconcode + ".png"
-            
+
             //Create content to add values to html
             const content = `<div class='ch' id=we-${i}>
             <p id="city">${getName + ' ' + getCountry}</p>
@@ -63,16 +63,16 @@ function searchAction() {
             </div>
             `;
             i++;
-            
+
             //Add content to box class at 'index.html'
-            {$('.box').append(content);}
-            
+            { $('.box').append(content); }
+
 
         })
         .catch(error => {
             //handle error
             showmess(error);
-            
+
         });
 
     input.focus()
