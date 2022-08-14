@@ -90,7 +90,8 @@ h1,
 .display .box #del {
   color: red;
   cursor: pointer;  
-  right: 1px;
+  right: 20px;
+  position: absolute;
 }
 
 .display .box #del:hover {
