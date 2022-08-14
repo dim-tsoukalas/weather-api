@@ -60,6 +60,7 @@ function searchAction() {
             <p id="temp">${toCelcius(getTemp)}&#8451</p>
             <div id="icon"><img src='${iconurl}' id="wicon"></div>
             <p id="description">${getDes.toUpperCase()}</p>
+            <button id='del' onclick="deleteWeather('we-${i}')">Remove Element</button>
             </div>
             `;
             i++;
@@ -81,3 +82,6 @@ function searchAction() {
 }
 
 
+function deleteWeather(id){
+    document.getElementById(id).remove();
+}
