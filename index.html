@@ -7,7 +7,7 @@
     <link href='https://css.gg/trash.css' rel='stylesheet'>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/abe620afc6.js" crossorigin="anonymous"></script>
-    <title>Page Title</title>
+    <title>Weather-Api</title>
     <script>
         //define values
         $().ready(function () {
@@ -27,22 +27,20 @@
 </head>
 
 <body>
-
-    <div class="container-fluid">
-        <i class="fa-solid fa-cloud-sun fa-2xl" style="padding: 50px 10px 20px 10px;"></i>
-        <h1>Weather</h1>
-
-        <section class="main">
-            <section class="inputs">
-                <input type="text" placeholder="Enter city" id="cityinput">
-                <input type="submit" value="Search" id="search">
-                <span class="warn"></span>
+    <header>
+        <div class="container-fluid">
+            <i class="fa-solid fa-cloud-sun fa-2xl" style="padding: 50px 10px 20px 10px;"></i>
+            <h1>Weather</h1>
+            <section class="main">
+                <section class="inputs">
+                    <input type="text" placeholder="Enter city" id="cityinput">
+                    <input type="submit" value="Search" id="search">
+                    <span class="warn"></span>
+                </section>
             </section>
 
-        </section>
-
-    </div>
-
+        </div>
+    </header>
     <section class="display">
         <div class="box">
         </div>
