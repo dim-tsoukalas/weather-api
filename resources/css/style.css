@@ -87,6 +87,11 @@ h1,
   height: auto;
 }
 
+.display .box #del {
+  color: red;
+  font-size: 25px;
+}
+
 .display .box {
   display: flex;
   align-items: center;
