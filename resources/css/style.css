@@ -89,7 +89,11 @@ h1,
 
 .display .box #del {
   color: red;
-  font-size: 25px;
+  cursor: pointer;  
+}
+
+.display .box #del:hover {
+  color: darkred; 
 }
 
 .display .box {
@@ -130,11 +134,5 @@ h1,
     
     
 }
-  .main .inputs #search {
-    border-radius: 16px;
-    border: 1px solid #a0a0a0;
-    font-size: 30px;
-
-  }
 
 }
