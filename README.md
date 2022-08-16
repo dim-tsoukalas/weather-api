@@ -14,7 +14,7 @@ A weather app that user searchs a city and shows up weather information.
 
 ## Desktop and phone screen
 <img src="https://user-images.githubusercontent.com/64429662/184963665-8ae84aaf-da70-4425-a122-fbf94716ee8d.jpg" width="300" height="600">
-<img src="https://user-images.githubusercontent.com/64429662/184963531-318738ea-ba56-4d28-9b64-e9cba12742d8.png" width="1200" height="600">
+<img src="https://user-images.githubusercontent.com/64429662/184963531-318738ea-ba56-4d28-9b64-e9cba12742d8.png" width="1200" height="500">
 
 # Sources
 - Tutorials from web
