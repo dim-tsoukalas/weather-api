@@ -1,3 +1,18 @@
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+header {
+  animation: 1s ease-out 0s 1 slideInLeft;
+
+}
+
+
 * {
   background-color: black;
   font-family: Helvetica, sans-serif, "Times New Roman", Times, serif;
@@ -26,7 +41,7 @@ h1,
 
 
 .display .wrapper {
- 
+
   border-collapse: separate;
   border-spacing: 15px;
   border: 1px inset #a0a0a0;
@@ -35,7 +50,7 @@ h1,
 }
 
 .display::after {
-  content: ’’;
+  content: â€™â€™;
   width: 90%;
   height: 50px;
   position: absolute;
@@ -87,45 +102,85 @@ h1,
   height: auto;
 }
 
+.display .box #del {
+  color: red;
+  cursor: pointer;
+
+}
+
+.display .box #del:hover {
+  color: rgb(255, 130, 130); 
+}
+
+.display .box #del .delete_hov {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  width: 60px;
+  top: 100%;
+  left: 50%;
+  margin-left: -80px;
+}
+
+.display .box #del:hover .delete_hov {
+  visibility: visible;
+}
+
 .display .box {
-  display:flex;
+  display: flex;
   align-items: center;
   justify-content: space-evenly;
 }
 
 .box :first-child {
-  align-self:center;
+  align-self: center;
 }
 
 .box :last-child {
-  align-self:center;
+  align-self: center;
 }
 
-@media only screen and (max-width: 580px) {
+/* For mobile phones: */
+@media screen and (max-width: 600px) {
 
-  /* For mobile phones: */
-  * {
-    text-align: center;
-    width :100%;
-    font-size: 40px;
-  }
 
-  .container-fluid .main .inputs #search,
   .container-fluid .main .inputs #cityinput {
     width: 100%;
   }
 
-  .display .box {
+   .display .box {
     display: block;
     align-items: center;
     justify-content: space-evenly;
   }
+ .display .box .ch{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+  .box :last-child {
+  align-self:stretch;
+    display: block;
+    
+    
+}
 
-  .main .inputs #search {
-  border-radius: 16px;
-  border: 1px solid #a0a0a0;
-  font-size: 30px;
+.display .box #del {
+  color: red;
+  cursor: pointer;  
+  right: 20px;
+  position: absolute;
+}
 
+.display .box #del:hover {
+  color: darkred; 
 }
 
 }
