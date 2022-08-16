@@ -104,13 +104,33 @@ h1,
 
 .display .box #del {
   color: red;
-  cursor: pointer;  
-  right: 20px;
-  position: absolute;
+  cursor: pointer;
+
 }
 
 .display .box #del:hover {
-  color: darkred; 
+  color: rgb(255, 130, 130); 
+}
+
+.display .box #del .delete_hov {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  width: 60px;
+  top: 100%;
+  left: 50%;
+  margin-left: -80px;
+}
+
+.display .box #del:hover .delete_hov {
+  visibility: visible;
 }
 
 .display .box {
@@ -150,6 +170,17 @@ h1,
     display: block;
     
     
+}
+
+.display .box #del {
+  color: red;
+  cursor: pointer;  
+  right: 20px;
+  position: absolute;
+}
+
+.display .box #del:hover {
+  color: darkred; 
 }
 
 }
