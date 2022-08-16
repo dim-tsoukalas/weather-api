@@ -1,5 +1,5 @@
 # Introduction
-A weather app that user searchs a city and shows up weather information.
+A weather app that user searchs a city and shows up weather information. I made this app to exercise my skills at front end developer technologies.
 
 # Technologies
 - [Open Weather API](https://openweathermap.org/api)
